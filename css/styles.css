@@ -26,10 +26,16 @@
 /* Nav styles */
 
 header {
+<<<<<<< HEAD
   content: "";
   width: 100vw;
   height: 5em;
   background-color: var(--clr-dark);
+=======
+    width: 100vw;
+    height: 5em;
+    background-color: var(--clr-dark);
+>>>>>>> 716ce3a7c85d72e2d2fa950f10ba1d4e0f375e67
 }
 
 nav {
@@ -112,13 +118,13 @@ nav {
 
 /* Welcome area styles */
 
-.welcome img {
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  /* opacity: 90%; */
-  filter: blur(4px);
+.welcome img{
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    /* opacity: 90%; */
+    filter: blur(4px);
 }
 
 /* .about {
