@@ -26,7 +26,6 @@
 /* Nav styles */
 
 header {
-    content: '';
     width: 100vw;
     height: 5em;
     background-color: var(--clr-dark);
@@ -46,7 +45,7 @@ nav {
 
 .nav-link {
     list-style: none;
-    margin: 1.15em 1.15em;
+    margin: 1.15em 1.6em;
     /* border: 2px solid red; */
 }
 
