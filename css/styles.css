@@ -26,16 +26,9 @@
 /* Nav styles */
 
 header {
-<<<<<<< HEAD
-  content: "";
   width: 100vw;
   height: 5em;
   background-color: var(--clr-dark);
-=======
-    width: 100vw;
-    height: 5em;
-    background-color: var(--clr-dark);
->>>>>>> 716ce3a7c85d72e2d2fa950f10ba1d4e0f375e67
 }
 
 nav {
@@ -97,10 +90,15 @@ nav {
     height: 5em;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .nav-link {
     margin-top: 2em;
+  }
+
+  .nav-link:first-child {
+    margin-left: 2em;
   }
 
   .nav-items {
@@ -114,17 +112,46 @@ nav {
     margin-top: 110px;
     order: 1;
   }
+
+  .logo:hover {
+    transform: scale(1.35);
+  }
 }
 
 /* Welcome area styles */
 
-.welcome img{
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    /* opacity: 90%; */
-    filter: blur(4px);
+.welcome {
+  position: relative;
+  margin-top: -3px;
+}
+
+.container-welcome img {
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  /* opacity: 90%; */
+  filter: blur(4px);
+}
+
+.container-welcome {
+  position: relative;
+}
+
+.title-welcome {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 11em;
+  right: 4em;
+  color: var(--clr-dark);
+}
+
+@media (max-width: 500px) {
+  .title-welcome {
+    top: 11em;
+    right: 1em;
+  }
 }
 
 /* .about {
