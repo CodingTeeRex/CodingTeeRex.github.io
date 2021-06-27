@@ -113,7 +113,7 @@ nav {
     width: 100vw;
     object-fit: cover;
     /* opacity: 90%; */
-    filter: blur(4px);
+    filter: blur(10px);
 }
 
 /* .about {
