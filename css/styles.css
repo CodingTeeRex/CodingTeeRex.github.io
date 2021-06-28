@@ -27,14 +27,15 @@
 .title-font {
   font-family: var(--font-title);
   font-weight: 700;
+  font-size: 2.9em;
   letter-spacing: 3px;
   text-shadow: 1px 1px 5px #ab8fb7;
 }
 
-.text-font {
+.subtitle-font {
   font-family: var(--font-text);
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: .9em;
   color: black;
   text-shadow: 1px 1px 5px #ab8fb7;
 }
@@ -145,6 +146,7 @@ nav {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
+  opacity: 90%;
 }
 
 .welcome-container {
@@ -170,17 +172,43 @@ nav {
 }
 
 .welcome-subtitle {
+  /* position: fixed; */
+  margin-top: 4em;
   width: max-content;
   text-align: center;
+}
+
+#main-title {
+  border-right: 0.3rem solid rgba(255, 255, 255, 0.8);
+  animation: cursor-blink 500ms steps(20) infinite normal;
+}
+
+@keyframes cursor-blink {
+  from {
+    border-right-color: rgba(255, 255, 255, .8);
+  } to {
+    border-right-color: transparent;
+  }
 }
 
 @media (max-width: 560px) {
   .title-container {
     width: min-content;
   }
+
+
+  .welcome-title {
+    width: fit-content;
+  }
+
+  .welcome-subtitle {
+    margin-top: 20em;
+    position: fixed;
+  }
 }
 
-/* .about {
-    background-color: white;
-    height: 100vh;
-} */
+/* About area styles */
+
+#about {
+  height: 100vh;
+}
