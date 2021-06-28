@@ -147,6 +147,43 @@ nav {
   width: 100vw;
   object-fit: cover;
   opacity: 90%;
+  animation: breathe 20s steps(20) infinite normal;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.025);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  30% {
+    transform: scale(1.075);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.125);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1.075);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  90% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .welcome-container {
