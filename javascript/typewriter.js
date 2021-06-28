@@ -42,38 +42,27 @@ class TypeWriter {
             console.log("Current Idx: " + index + "\n" + "Current Word: " + currentWord);
 
             if (this.isDeleting) {
-                console.log("del");
                 typeSpeed /= 2;
+
                 this.txt = currentWord.substring(0, this.txt.length - 1);
-                console.log("before");
                 console.log("this.txt: " + this.txt);
-                console.log("after");
             } else {
-                console.log("!del");
-                console.log("this.txt bf: " + this.txt);
                 this.txt = currentWord.substring(0, this.txt.length + 1);
-                console.log("this.txt af: " + this.txt);
-                console.log(this.txt.length);
-                console.log(currentWord[1]);
+                console.log("this.txt: " + this.txt);
             }
             
             // Insert secondary text into HTML
-            // this.textElement = document.querySelector('.welcome-title');
-            console.log("Type Sec");
             this.textElement = document.getElementById('main-title');
             this.textElement.innerHTML = `<span>${this.mainText} ${this.txt}</span>`;
 
             if (!this.isDeleting && this.txt === currentWord) {
-                console.log("del");
                 typeSpeed = this.wait;
                 this.isDeleting = true;
             } else if (this.isDeleting && this.txt === '') {
                 this.isDeleting = false;
-                console.log("!del");
                 this.currentWordIdx++;
                 typeSpeed = 3000;
             }
-            // typeSpeed = 5000;
         }
         setTimeout(() => this.type(), typeSpeed);
     }
