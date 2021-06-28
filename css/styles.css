@@ -2,6 +2,7 @@
   --clr-dark: #252525;
   --clr-text: #14a76c;
   --font-nav: "Comfortaa", cursive;
+  --font-title: "Anonymous Pro", monospace;
   --font-text: "Source Sans Pro", sans-serif;
 }
 
@@ -21,6 +22,21 @@
   font-size: 1.15em;
   color: #ffffff;
   letter-spacing: 3px;
+}
+
+.title-font {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px #ab8fb7;
+}
+
+.text-font {
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: 0.8em;
+  color: black;
+  text-shadow: 1px 1px 5px #ab8fb7;
 }
 
 /* Nav styles */
@@ -83,7 +99,7 @@ nav {
   transform: scale(1.35) translateY(1em);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   header {
     position: static;
     height: 180px;
@@ -124,37 +140,43 @@ nav {
 
 /* Welcome area styles */
 
-.welcome {
-  position: relative;
-  margin-top: -3px;
-}
-
-.container-welcome img {
+.welcome-container img {
   padding: 0;
   height: 100vh;
   width: 100vw;
   object-fit: cover;
-  /* opacity: 90%; */
-  filter: blur(4px);
 }
 
-.container-welcome {
+.welcome-container {
   position: relative;
 }
 
-.title-welcome {
-  position: absolute;
+.title-container {
   display: flex;
-  flex-wrap: wrap;
-  top: 11em;
-  right: 4em;
-  color: var(--clr-dark);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 500px) {
-  .title-welcome {
-    top: 11em;
-    right: 1em;
+.welcome-title {
+  text-align: center;
+  color: var(--clr-dark);
+  margin-bottom: 1em;
+}
+
+.welcome-subtitle {
+  width: max-content;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .title-container {
+    width: min-content;
   }
 }
 
