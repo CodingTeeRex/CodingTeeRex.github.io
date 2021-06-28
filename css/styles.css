@@ -142,7 +142,11 @@ nav {
 
 /* Welcome area styles */
 
-.welcome-container img {
+.welcome-bg {
+  background-image: url(../images/welcome_galaxy_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
   padding: 0;
   height: 100vh;
   width: 100vw;
@@ -189,6 +193,7 @@ nav {
 
 .welcome-container {
   position: relative;
+  overflow: hidden;
 }
 
 .title-container {
