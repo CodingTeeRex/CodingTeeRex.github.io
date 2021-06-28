@@ -53,7 +53,7 @@ class TypeWriter {
             
             // Insert secondary text into HTML
             this.textElement = document.getElementById('main-title');
-            this.textElement.innerHTML = `<span>${this.mainText} ${this.txt}</span>`;
+            this.textElement.innerHTML = `<span>${this.mainText}<span id="names">${this.txt}</span></span>`;
 
             if (!this.isDeleting && this.txt === currentWord) {
                 typeSpeed = this.wait;
