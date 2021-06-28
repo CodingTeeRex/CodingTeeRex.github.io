@@ -6,7 +6,7 @@ class TypeWriter {
         this.txt = '';
         this.isMainTextComplete = false;
         this.isDeleting = false;
-        this.wordBank = ['Ivan!', 'CodingTeeRex'];
+        this.wordBank = ['Ivan!', 'CodingTeeRex!'];
         this.currentWordIdx = 0;
         this.type();
     }
