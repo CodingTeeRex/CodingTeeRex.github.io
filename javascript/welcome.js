@@ -1,6 +1,6 @@
 class TypeWriter {
-    constructor(textElement, mainText, wait = 1500) {
-        this.textElement = textElement;
+    constructor(targetElement, mainText, wait = 1500) {
+        this.targetElement = targetElement;
         this.mainText = mainText;
         this.wait = wait;
         this.txt = '';
@@ -22,7 +22,7 @@ class TypeWriter {
             console.log("this.txt: " + this.txt);
             
             // Insert word into HTML
-            this.textElement.innerHTML = `<span id="main-title">${this.txt}</span>`;
+            this.targetElement.innerHTML = `<span id="main-title">${this.txt}</span>`;
 
             if (this.txt === this.mainText) {
                 typeSpeed = 800;
@@ -52,8 +52,8 @@ class TypeWriter {
             }
             
             // Insert secondary text into HTML
-            this.textElement = document.getElementById('main-title');
-            this.textElement.innerHTML = `<span>${this.mainText}<span id="names">${this.txt}</span></span>`;
+            this.targetElement = document.getElementById('main-title');
+            this.targetElement.innerHTML = `<span>${this.mainText}<span id="names">${this.txt}</span></span>`;
 
             if (!this.isDeleting && this.txt === currentWord) {
                 typeSpeed = this.wait;
@@ -68,11 +68,55 @@ class TypeWriter {
     }
 }
 
-const init = () => {
-    const txtElement = document.querySelector('.welcome-title');
-    const displayTextMain = "Hello, my name is ";
-    new TypeWriter(txtElement, displayTextMain);
-    console.log("init");
+class bounceEffect {
+    constructor(targetElement) {
+        this.targetElement = targetElement;
+        this.bounce();
+    }
+
+    bounce() {
+        const text = this.targetElement.innerHTML;
+        this.targetElement.innerHTML = "";
+        let updatedText = "";
+
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === ' ')
+                updatedText += `<span>&nbsp</span>`;
+            updatedText += `<span id="bounce">${text.charAt(i)}</span>`;
+        }
+        //console.log(updatedText);
+
+        this.targetElement.innerHTML = updatedText;
+        console.log(this.targetElement.innerHTML);
+
+        let letters = document.querySelectorAll('#bounce')
+        console.log(letters);
+
+        let j = 0;
+
+        function applyBounce() {
+            setTimeout(() => {
+                letters[j].className = "anim-bounce";
+                j++;
+                if (j < letters.length) {
+                    applyBounce();
+                }
+            }, 30)
+        }
+        applyBounce();
+        
+        console.log(this.targetElement.innerHTML);
+        console.log(document.querySelectorAll('anim-bounce'));
+    }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+// Start TypeWriter on background loaded
+const welcome = document.querySelector('.welcome-bg');
+welcome.addEventListener('load', () => {
+    const welcome = document.querySelector('.welcome-title');
+    const displayTextMain = "Hello, My name is ";
+    new TypeWriter(welcome, displayTextMain);
+})
+
+const welcome_subtitle = document.querySelector('.welcome-subtitle')
+new bounceEffect(welcome_subtitle);

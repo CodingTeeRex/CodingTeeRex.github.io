@@ -29,15 +29,16 @@
   font-weight: 700;
   font-size: 2.9em;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 5px #ab8fb7;
+  color: #fff5db;
+  text-shadow: 3px 3px 2px black;
 }
 
 .subtitle-font {
   font-family: var(--font-text);
   font-weight: 600;
-  font-size: 0.9em;
-  color: black;
-  text-shadow: 2px 2px 5px #ab8fb7;
+  font-size: 1.4em;
+  color: #fff5db;
+  text-shadow: 3px 3px 2px black;
 }
 
 /* Nav styles */
@@ -143,8 +144,6 @@ nav {
 /* Welcome area styles */
 
 .welcome-bg {
-  background-image: url(../images/welcome_galaxy_bg.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   padding: 0;
@@ -152,7 +151,7 @@ nav {
   width: 100vw;
   object-fit: cover;
   opacity: 90%;
-  animation: breathe 20s steps(20) infinite normal;
+  animation: breathe 20s steps(50) infinite normal;
 }
 
 @keyframes breathe {
@@ -206,19 +205,19 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* border: 4px dashed yellow; */
 }
 
 .welcome-title {
   text-align: center;
-  color: var(--clr-dark);
   margin-bottom: 1em;
 }
 
 .welcome-subtitle {
   /* position: fixed; */
-  margin-top: 4em;
+  display: flex;
   width: max-content;
-  text-align: center;
+  /* border: 2px solid red; */
 }
 
 #main-title {
@@ -228,7 +227,7 @@ nav {
 
 #names {
   color: rgb(252, 173, 4);
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 3px 3px 2px black;
   text-decoration: underline;
 }
 
@@ -253,15 +252,59 @@ nav {
   .welcome-title {
     width: fit-content;
   }
+}
 
-  .welcome-subtitle {
-    margin-top: 20em;
-    position: fixed;
+.anim-bounce {
+  animation: letter-bounce 500ms linear 1 normal;
+  animation-delay: 2s;
+}
+
+@keyframes letter-bounce {
+  0% {
+    transform: translateY(-1px);
+  } 20% {
+    transform: translateY(-2px);
+  } 30% {
+    transform: translateY(-3px);
+  } 40% {
+    transform: translateY(-4px);
+  } 50% {
+    transform: translateY(-3px);
+  } 60% {
+    transform: translateY(-2px);
+  } 70% {
+    transform: translateY(-1px);
+  } 80% {
+    transform: translateY(0px);
+  } 90% {
+    transform: translateY(4px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+/* @keyframes letter-bounce {
+  0% {
+    transform: translateY(-2px);
+  } 25% {
+    transform: translateY(-4px);
+  } 50% {
+    transform: translateY(-2px);
+  } 75% {
+    transform: translateY(-1px);
+  } 100% {
+    transform: translateY(0px);
+  } 
+} */
 
 /* About area styles */
 
 #about {
   height: 100vh;
+  text-align: center;
+}
+
+.about-container {
+  border-top: 7px solid black;
 }
