@@ -113,6 +113,7 @@ class bounceEffect {
 // Intro animations
 const timeline = gsap.timeline({defaults: {ease: 'power1.out'}});
 
+// timeline.to('.text', {opacity: '0'}, {opacity: 1, duration: 0.1})
 timeline.to('.text', {y: '0%', duration: .8, stagger: .6});
 timeline.to('.intro', {opacity: '0', duration: 1});
 timeline.fromTo('header', {opacity: '0'}, {opacity: 1, duration: 1});

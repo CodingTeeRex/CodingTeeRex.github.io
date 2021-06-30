@@ -52,7 +52,7 @@
 
 .intro-text {
   color: orange;
-  font-family: var(--font-intro);
+  font-family: var(--font-text);
   font-size: 1.5em;
   z-index: 1;
 }
