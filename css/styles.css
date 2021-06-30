@@ -1,6 +1,7 @@
 :root {
   --clr-dark: #252525;
   --clr-text: #14a76c;
+  --font-intro: "Press Start 2P", cursive;
   --font-nav: "Comfortaa", cursive;
   --font-title: "Anonymous Pro", monospace;
   --font-text: "Source Sans Pro", sans-serif;
@@ -12,6 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* Typography */
@@ -30,7 +32,9 @@
   font-size: 2.9em;
   letter-spacing: 3px;
   color: #fff5db;
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 3px 3px 2px black, 4px 4px 2px black, 5px 5px 2px black,
+    6px 6px 2px black, 7px 7px 2px black, 8px 8px 2px black, 9px 9px 10px pink,
+    10px 10px 15px white;
 }
 
 .subtitle-font {
@@ -38,7 +42,55 @@
   font-weight: 600;
   font-size: 1.4em;
   color: #fff5db;
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 3px 3px 2px black, 4px 4px 2px black, 5px 5px 2px black,
+    6px 6px 2px black,
+    /* 7px 7px 2px black,
+  8px 8px 2px black,
+  9px 9px 2px white, */ 10px 10px
+      15px pink;
+}
+
+.intro-text {
+  color: orange;
+  font-family: var(--font-intro);
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+/* Intro Animation */
+
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indent {
+  margin-left: 2em;
+}
+
+.hide {
+  margin-bottom: 0.5em;
+  letter-spacing: 8px;
+  background: black;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+@media (max-width: 560px) {
+  .intro-text {
+    font-size: 0.5em;
+  }
 }
 
 /* Nav styles */
@@ -54,6 +106,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .nav-items {
@@ -94,7 +147,6 @@ nav {
   box-shadow: 1px 1px 10px var(--clr-dark);
   height: 4.5em;
   transition: transform 600ms ease;
-  z-index: 1;
 }
 
 .logo:hover {
@@ -103,9 +155,9 @@ nav {
 
 @media (max-width: 560px) {
   header {
-    position: static;
-    height: 180px;
-    z-index: 100;
+    position: fixed;
+    height: 90px;
+    z-index: 1;
   }
 
   nav {
@@ -114,10 +166,16 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+  }
+
+  .nav-font {
+    font-size: 0.9em;
   }
 
   .nav-link {
     margin-top: 2em;
+    z-index: 2;
   }
 
   .nav-link:first-child {
@@ -129,11 +187,12 @@ nav {
   }
 
   .logo {
-    display: inline;
+    display: none;
     align-self: center;
     margin: 0;
     margin-top: 110px;
     order: 1;
+    z-index: 1;
   }
 
   .logo:hover {
@@ -152,6 +211,7 @@ nav {
   object-fit: cover;
   opacity: 90%;
   animation: breathe 20s steps(50) infinite normal;
+  z-index: 0;
 }
 
 @keyframes breathe {
@@ -211,6 +271,7 @@ nav {
 .welcome-title {
   text-align: center;
   margin-bottom: 1em;
+  /* border: 2px solid red; */
 }
 
 .welcome-subtitle {
@@ -227,7 +288,9 @@ nav {
 
 #names {
   color: rgb(252, 173, 4);
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 3px 3px 2px black, 4px 4px 2px black, 5px 5px 2px black,
+    6px 6px 2px black, 7px 7px 2px black, 8px 8px 2px black,
+    9px 9px 5px rgb(252, 173, 4), 10px 10px 15px black;
   text-decoration: underline;
 }
 
@@ -250,7 +313,15 @@ nav {
   }
 
   .welcome-title {
-    width: fit-content;
+    width: min-content;
+  }
+
+  .title-font {
+    font-size: 2.4em;
+  }
+
+  .subtitle-font {
+    font-size: .9em;
   }
 }
 
@@ -262,23 +333,32 @@ nav {
 @keyframes letter-bounce {
   0% {
     transform: translateY(-1px);
-  } 20% {
+  }
+  20% {
     transform: translateY(-2px);
-  } 30% {
+  }
+  30% {
     transform: translateY(-3px);
-  } 40% {
+  }
+  40% {
     transform: translateY(-4px);
-  } 50% {
+  }
+  50% {
     transform: translateY(-3px);
-  } 60% {
+  }
+  60% {
     transform: translateY(-2px);
-  } 70% {
+  }
+  70% {
     transform: translateY(-1px);
-  } 80% {
+  }
+  80% {
     transform: translateY(0px);
-  } 90% {
+  }
+  90% {
     transform: translateY(4px);
-  } 100% {
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -300,11 +380,13 @@ nav {
 
 /* About area styles */
 
+.about-container {
+  border-top: 7px solid black;
+  scroll-snap-type: y mandatory;
+}
+
 #about {
   height: 100vh;
   text-align: center;
-}
-
-.about-container {
-  border-top: 7px solid black;
+  scroll-snap-align: start;
 }

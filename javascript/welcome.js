@@ -110,13 +110,19 @@ class bounceEffect {
     }
 }
 
-// Start TypeWriter on background loaded
-const welcome = document.querySelector('.welcome-bg');
-welcome.addEventListener('load', () => {
+// Intro animations
+const timeline = gsap.timeline({defaults: {ease: 'power1.out'}});
+
+timeline.to('.text', {y: '0%', duration: .8, stagger: .6});
+timeline.to('.intro', {opacity: '0', duration: 1});
+timeline.fromTo('header', {opacity: '0'}, {opacity: 1, duration: 1});
+timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 1});
+timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 1});
+timeline.fromTo('.welcome-subtitle', {opacity: '0'}, {opacity: 1, duration: 1, delay: 1.7});
+
+// Start TypeWriter
+setTimeout(() => {
     const welcome = document.querySelector('.welcome-title');
     const displayTextMain = "Hello, My name is ";
     new TypeWriter(welcome, displayTextMain);
-})
-
-const welcome_subtitle = document.querySelector('.welcome-subtitle')
-new bounceEffect(welcome_subtitle);
+}, 6000);
