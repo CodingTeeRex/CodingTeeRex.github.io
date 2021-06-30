@@ -305,6 +305,24 @@ nav {
   }
 }
 
+@media (max-width: 960px) {
+  .title-font {
+    font-size: 2.4em;
+  }
+
+  .title-container {
+    width: min-content;
+  }
+
+  .welcome-title {
+    width: min-content;
+  }
+
+  .subtitle-font {
+    font-size: 1.1em;
+  }
+}
+
 @media (max-width: 560px) {
   .welcome-container {
     z-index: -1;
