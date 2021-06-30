@@ -79,6 +79,8 @@
   margin-bottom: 0.5em;
   letter-spacing: 8px;
   background: black;
+  height: fit-content;
+  width: fit-content;
   overflow: hidden;
 }
 
