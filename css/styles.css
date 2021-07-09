@@ -85,10 +85,6 @@ strong {
   font-size: 1.1rem;
 }
 
-.about-body-font {
-  color: white;
-}
-
 /* Intro Animation */
 
 .intro {
@@ -186,7 +182,8 @@ nav {
   transition: transform 600ms ease;
 }
 
-.logo:hover {
+.logo:hover,
+.logo:focus {
   transform: scale(1.35) translateY(1em);
 }
 
@@ -232,7 +229,8 @@ nav {
     z-index: 1;
   }
 
-  .logo:hover {
+  .logo:hover,
+  .logo:focus {
     transform: scale(1.35);
   }
 }
@@ -442,48 +440,15 @@ nav {
 .about-container {
   border-top: 2px solid black;
   background-color: white;
-  /* background-image: linear-gradient(315deg, #6d5d8b, #1d3c61, #0000 99%); */
-  /* box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5); */
-  height: 200vh;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.about-header {
-  background: #000;
-  position: relative;
-  width: fit-content;
-  z-index: 0;
-}
-
-.about-bg {
-  /* background-image: url(../images/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg); */
-  /* background-color: black;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center; */
-  filter: blur(4px);
-  height: 400px;
-  position: relative;
-  display: flex;
-}
-
-.about-content {
-  color: white;
-}
-
-.about-body {
-  margin: 0;
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: 1fr 1fr; */
-  grid-template-areas: "image cnt";
-  gap: 50px;
   background-image: url(../images/welcome_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  max-height: 960px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 0;
 }
 
 .about-title {
@@ -496,26 +461,45 @@ nav {
 
 .about-body-descr {
   margin-top: 20px;
+  position: relative;
 }
 
-.about-body-content {
-  grid-area: cnt;
-  margin-left: 200px;
-  margin-top: 150px;
+.shape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: -20px;
+  right: -70px;
+  height: 160px;
+  width: 160px;
+  border-radius: 20px;
+  box-shadow: 2px 1px 1px black, 3px 2px 1px black, 4px 3px 1px black,
+    5px 4px 1px black, 5px 5px 5px black, -10px 10px 20px rgba(0, 0, 0, 0.3);
+  transform: rotate(20deg);
+}
+
+.about-body-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  box-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
+    -5px 4px 1px black, -5px 5px 5px black;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  opacity: 95%;
+  transform: rotate(-20deg);
 }
 
 .about-body-item {
-  color: black;
   font-size: 1rem;
   height: fit-content;
   width: fit-content;
-  min-width: 450px;;
-  max-width: 600px;
+  max-width: 800px;
   border-radius: 15px;
   align-self: center;
   justify-self: center;
+  margin: 50px 150px;
   padding: 25px;
-  background-color: inherit;
   border: 1px solid black;
   text-align: justify;
   position: relative;
@@ -523,89 +507,20 @@ nav {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1), inset 0 0 2000px rgba(0, 0, 0, 0.65);
 }
 
-.right-container {
-  grid-area: image;
-  position: relative;
-  align-self: center;
-  justify-self: center;
-  z-index: 1;
-  margin-left: 150px;
-}
-
-.shape {
-  grid-area: image;
-  position: absolute;
-  background-color: rgba(100, 100, 100, 0.8);
-  top: -10%;
-  left: 10%;
-  height: 400px;
-  width: 350px;
-  border-radius: 20px;
-  box-shadow: 2px 1px 1px black, 3px 2px 1px black, 4px 3px 1px black,
-    5px 4px 1px black, 5px 5px 5px black, -30px 30px 20px rgba(0, 0, 0, 0.7);
-  transform: rotate(20deg);
-  z-index: 1;
-}
-
-.about-body-image {
-  grid-area: image;
-  height: 350px;
-  width: 350px;
-  border-radius: 15px;
-  box-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
-    -5px 4px 1px black, -5px 5px 5px black;
-  position: relative;
-  left: 35px;
-  z-index: 2;
-  opacity: 95%;
-}
-
-.skills-container {
-  grid-area: skills;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: 2px solid black;
-  margin-top: 200px;
-}
-
-.skills {
-  padding: 25px;
-  height: 50px;
-  width: 800px;
-  color: black;
-  border: 2px solid black;
-}
-
-@media(max-width: 1318px) {
-  .about-title {
-    font-size: 2.4rem;
-  }
-  .about-body-font > p {
-    font-size: 0.85rem;
-  }
-
-  .about-body-image {
-    height: 250px;
-    width: 250px;
+@media (min-width:557px) and (max-width: 741px) {
+  .about-container {
+    height: 100vh;
   }
 
   .shape {
-    height: 290px;
-    width: 280px;
-    top: -8%;
+    height: 110px;
+    width: 110px;
+    right: -40px;
   }
 
-  .about-body-content {
-    margin-top: 100px;
-  }  
-}
-
-@media(max-width: 1317px) {
-  .about-body {
-    grid-template-columns: 1fr;
-    grid-template-areas: "img" "cnt";
-    min-height: 100vh;
+  .about-body-image {
+    height: 100px;
+    width: 100px;
   }
 
   .about-title {
@@ -613,50 +528,40 @@ nav {
   }
 
   .about-body-font > p {
-    grid-area: cnt;
     font-size: 0.85rem;
-    color: white;
-    text-shadow: -1px 1px 10px black;
-  }
-
-  .about-body-content {
-    margin: auto;
-    margin-top: -450px
   }
 
   .about-body-item {
-    box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1), inset 0 0 2000px rgba(2, 1, 1, .7);
-  }
-
-  .right-container {
-    grid-area: img;
-    margin: auto;
-    margin-top: 100px;
-    margin-right: 80px;
+    margin: 20px 75px;
   }
 }
 
-@media (max-width: 671px) {
-  .right-container {
-    margin: auto;
-    margin-top: 80px;
-  }
-
-  .about-title {
-    font-size: ;
-  }
-
-  .about-body-content {
-    margin: -375px auto;
-  }
-
-  .about-body-image {
-    height: 150px;
-    width: 150px;
+@media (min-width: 0px) and (max-width: 557px) {
+  .about-container {
+    height: 160vh;
   }
 
   .shape {
-    height: 185px;
-    width: 175px;
+    height: 90px;
+    width: 90px;
+    right: -40px;
+  }
+
+  .about-body-image {
+    height: 80px;
+    width: 80px;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .about-body-font > p {
+    font-size: 0.85rem;
+  }
+
+  .about-body-item {
+    margin: 20px 75px;
   }
 }
