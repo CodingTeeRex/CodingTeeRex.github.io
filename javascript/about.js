@@ -52,7 +52,6 @@ const options = {
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         console.log(entry.target);
-        gsap.fromTo(".about-container", {backgroundSize: 0}, {duration: 1, backgroundSize: "cover"});
         gsap.fromTo(".about-body-item", {opacity: 0, x: "-50%"}, {duration: 1.5, x: 0, opacity: 1, display: "block"});
     })
 }, options);
