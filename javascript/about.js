@@ -41,5 +41,21 @@ class bouncingLetters {
 // });
 
 // Intersection Observer
-const aboutSection = document.querySelector("#about");
-console.log(aboutSection);
+
+const sections = document.querySelectorAll("section");
+const options = {
+    root: null,
+    rootMargin: "-150px",
+    threshold: 0
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        console.log(entry.target);
+        gsap.fromTo(".about-body-item", {opacity: 0, x: "-50%"}, {duration: 1.5, x: 0, opacity: 1});
+    })
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+})

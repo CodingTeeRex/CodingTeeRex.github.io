@@ -484,7 +484,7 @@ nav {
   box-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
     -5px 4px 1px black, -5px 5px 5px black;
   position: absolute;
-  left: 0;
+  left: 5px;
   z-index: 2;
   opacity: 95%;
   transform: rotate(-20deg);
@@ -544,7 +544,7 @@ nav {
   .shape {
     height: 90px;
     width: 90px;
-    right: -40px;
+    right: -30px;
   }
 
   .about-body-image {
