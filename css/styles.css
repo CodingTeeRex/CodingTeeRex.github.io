@@ -22,7 +22,7 @@ html {
 /* Typography */
 
 strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .nav-font {
@@ -75,7 +75,7 @@ strong {
 .about-body-font > p {
   font-family: "Heebo", sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
   color: white;
   text-shadow: -1px 1px 10px black;
@@ -504,10 +504,12 @@ nav {
   text-align: justify;
   position: relative;
   z-index: 1;
-  box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1), inset 0 0 2000px rgba(0, 0, 0, 0.65);
+  box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
+    inset 0 0 2000px rgba(0, 0, 0, 0.65);
+  display: none;
 }
 
-@media (min-width:557px) and (max-width: 741px) {
+@media (min-width: 557px) and (max-width: 741px) {
   .about-container {
     height: 100vh;
   }
@@ -536,7 +538,7 @@ nav {
   }
 }
 
-@media (min-width: 414px){
+@media (min-width: 414px) {
   .about-container {
     height: 110vh;
   }
