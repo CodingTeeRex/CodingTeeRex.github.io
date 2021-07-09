@@ -116,10 +116,11 @@ const timeline = gsap.timeline({defaults: {ease: 'power1.out'}});
 // timeline.to('.text', {opacity: '0'}, {opacity: 1, duration: 0.1})
 timeline.to('.text', {y: '0%', duration: .8, stagger: .6});
 timeline.to('.intro', {opacity: '0', duration: 1});
+timeline.fromTo('body', {overflow: 'hidden'}, {overflow: 'visible'})
 timeline.fromTo('header', {opacity: '0'}, {opacity: 1, duration: 1});
-timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 1});
-timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 1});
-timeline.fromTo('.welcome-subtitle', {opacity: '0'}, {opacity: 1, duration: 1, delay: 1.7});
+timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 0.1});
+// timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 1});
+timeline.fromTo('.welcome-subtitle', {opacity: '0'}, {opacity: 1, duration: 1, delay: 4});
 
 // Start TypeWriter
 setTimeout(() => {
