@@ -536,7 +536,37 @@ nav {
   }
 }
 
-@media (min-width: 0px) and (max-width: 557px) {
+@media (min-width: 414px){
+  .about-container {
+    height: 110vh;
+  }
+
+  .shape {
+    height: 90px;
+    width: 90px;
+    right: -40px;
+  }
+
+  .about-body-image {
+    height: 80px;
+    width: 80px;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .about-body-font > p {
+    font-size: 0.85rem;
+  }
+
+  .about-body-item {
+    margin: 20px 75px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 414px) {
   .about-container {
     height: 160vh;
   }
