@@ -123,8 +123,8 @@ timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 0.1});
 timeline.fromTo('.welcome-subtitle', {opacity: '0'}, {opacity: 1, duration: 1, delay: 4});
 
 // Start TypeWriter
-// setTimeout(() => {
-//     const welcome = document.querySelector('.welcome-title');
-//     const displayTextMain = "Hello, My name is ";
-//     new TypeWriter(welcome, displayTextMain);
-// }, 6000);
+setTimeout(() => {
+    const welcome = document.querySelector('.welcome-title');
+    const displayTextMain = "Hello, My name is ";
+    new TypeWriter(welcome, displayTextMain);
+}, 6000);
