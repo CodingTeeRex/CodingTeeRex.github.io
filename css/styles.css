@@ -442,7 +442,7 @@ nav {
   background-color: white;
   background-image: url(../images/welcome_bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 0%;
   height: 100vh;
   overflow: hidden;
   display: flex;
