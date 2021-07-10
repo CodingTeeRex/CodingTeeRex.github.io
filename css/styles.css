@@ -63,22 +63,13 @@ strong {
   z-index: 1;
 }
 
-.about-font {
-  font-family: "Heebo", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-shadow: 1px 0px 1px black, 2px 0px 1px black, 3px 0px 1px black,
-    4px 0px 1px black, 5px 0px 1px black, 6px 0px 3px black;
-}
-
 .about-body-font > p {
   font-family: "Heebo", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
-  text-shadow: -1px 1px 10px black;
+  text-shadow: -1px 1px 10px rgb(0, 0, 0);
 }
 
 .about-subtitle {
@@ -440,7 +431,7 @@ nav {
 .about-container {
   border-top: 2px solid black;
   background-color: white;
-  background: url(../images/welcome_bg.jpg) no-repeat left top;
+  background: url(../images/welcome_bg2.jpg) no-repeat left top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -454,6 +445,7 @@ nav {
 .about-title {
   font-family: var(--font-aboutTitle);
   font-size: 4rem;
+  color: black;
   letter-spacing: 3px;
   margin-bottom: 20px;
   position: relative;
@@ -505,13 +497,13 @@ nav {
   position: relative;
   z-index: 1;
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
-    inset 0 0 2000px rgba(0, 0, 0, 0.65);
+    inset 0 0 2000px rgba(133, 95, 58, 0.5);
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .about-container {
     /* background-image: radial-gradient(#daba87 40%, rgba(230, 210, 225, 0.6)); */
-    background-image: url(../images/Picture2.jpg);
+    background-image: url(../images/welcome_bg2_mobile.jpg);
     background-repeat: none;
     background-size: cover;
     height: 100vh;
@@ -559,7 +551,6 @@ nav {
 
   .about-title {
     font-size: 1.5rem;
-    color: white;
   }
 
   .about-body-font > p {
@@ -568,7 +559,6 @@ nav {
 
   .about-body-item {
     margin: auto 75px;
-    
   }
 }
 
