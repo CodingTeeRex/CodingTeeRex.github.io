@@ -440,7 +440,7 @@ nav {
 .about-container {
   border-top: 2px solid black;
   background-color: white;
-  background: url(../images/Picture2.jpg) no-repeat left top;
+  background: url(../images/welcome_bg.jpg) no-repeat left top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -508,15 +508,12 @@ nav {
     inset 0 0 2000px rgba(0, 0, 0, 0.65);
 }
 
-@media (pointer: none) {
-  .about-container {
-    background-image: linear-gradient(#daba87, #fff);
-  }
-}
-
 @media (max-width: 768px)  {
   .about-container {
-    background-image: radial-gradient(#daba87 40%, rgba(230, 210, 225, 0.6));
+    /* background-image: radial-gradient(#daba87 40%, rgba(230, 210, 225, 0.6)); */
+    background-image: url(../images/Picture2.jpg);
+    background-repeat: none;
+    background-size: cover;
     height: 100vh;
   }
 
@@ -546,7 +543,7 @@ nav {
 
 @media (min-width: 414px) {
   .about-container {
-    height: 110vh;
+    height: 100vh;
   }
 
   .shape {
@@ -571,18 +568,19 @@ nav {
 
   .about-body-item {
     margin: auto 75px;
+    
   }
 }
 
-@media (min-width: 0px) and (max-width: 414px) {
+@media (min-width: 0px) and (max-width: 415px) {
   .about-container {
-    height: 160vh;
+    height: 100vh;
   }
 
   .shape {
     height: 90px;
     width: 90px;
-    right: -40px;
+    right: 5px;
   }
 
   .about-body-image {
@@ -600,7 +598,8 @@ nav {
   }
 
   .about-body-item {
-    margin: auto 75px;
+    margin: auto 10px;
+    min-width: 310px;
   }
 }
 
