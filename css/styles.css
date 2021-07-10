@@ -508,8 +508,15 @@ nav {
     inset 0 0 2000px rgba(0, 0, 0, 0.65);
 }
 
-@media (min-width: 557px)  {
+@media (pointer: none) {
   .about-container {
+    background-image: linear-gradient(#daba87, #fff);
+  }
+}
+
+@media (max-width: 768px)  {
+  .about-container {
+    background-image: radial-gradient(#daba87 40%, rgba(230, 210, 225, 0.6));
     height: 100vh;
   }
 
