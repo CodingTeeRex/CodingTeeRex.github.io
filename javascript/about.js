@@ -51,7 +51,8 @@ const options = {
 
 const aboutMe = document.querySelector("#about");
 const aboutObs = new IntersectionObserver(function(entries, observer) {
-    gsap.fromTo(".about-body-item", {opacity: 0, x: "-10%"}, {duration: 1.5, x: 0, opacity: 1});gsap.fromTo(".skills", {opacity: 0, x: "10%"}, {duration: 1.5, x: 0, opacity: 1})
+    gsap.fromTo(".about-body-item", {opacity: 0, x: "-10%"}, {duration: 1.5, x: 0, opacity: 1, display: "block"});
+    gsap.fromTo(".skills", {opacity: 0, x: "10%"}, {duration: 1.5, x: 0, opacity: 1, display: "block"})
 }, options);
 
 aboutObs.observe(aboutMe);
