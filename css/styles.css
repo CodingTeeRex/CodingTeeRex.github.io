@@ -652,11 +652,14 @@ nav {
   left: 0;
 }
 
-@media screen and (orientation: portrait) {
-  .about-container {
-    height: 100vh;
-  }
-}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 768px) 
+                   and (orientation: landscape) {
+                      .about-container {
+                        height: 100vh;
+                      }
+                   }
 
 @media (min-width: 414px) {
   .about-container {
@@ -689,7 +692,7 @@ nav {
 
 @media (min-width: 0px) and (max-width: 415px) {
   .about-container {
-    height: 100vh;
+    height: 200vh;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "about" "skills";
@@ -732,7 +735,7 @@ nav {
     background-image: url(../images/welcome_bg2_mobile.jpg);
     background-repeat: none;
     background-size: cover;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
@@ -759,4 +762,3 @@ nav {
     justify-self: center;
   }
 }
-
