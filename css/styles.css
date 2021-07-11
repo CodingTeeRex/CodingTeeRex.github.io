@@ -668,7 +668,6 @@ nav {
     width: 80px;
   }
 
-
   .sub-heading {
     font-size: 1.5rem;
   }
@@ -684,7 +683,7 @@ nav {
 
 @media (min-width: 0px) and (max-width: 415px) {
   .about-container {
-    height: 100vh;
+    height: 200vh;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "about" "skills";
@@ -712,7 +711,6 @@ nav {
   .about-body-item {
     grid-area: about;
     margin: auto 10px;
-    height: 100%;
     min-width: 300px;
   }
 
@@ -728,7 +726,7 @@ nav {
     background-image: url(../images/welcome_bg2_mobile.jpg);
     background-repeat: none;
     background-size: cover;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
@@ -737,7 +735,7 @@ nav {
 
   .about-body-item {
     grid-area: about;
-    height: 100%;
+    max-height: fit-content;
     min-width: 300px;
   }
 
@@ -754,4 +752,4 @@ nav {
     min-width: 300px;
     justify-self: center;
   }
-} 
+}
