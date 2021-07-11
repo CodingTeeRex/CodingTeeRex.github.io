@@ -652,6 +652,12 @@ nav {
   left: 0;
 }
 
+@media screen and (orientation: portrait) {
+  .about-container {
+    height: 100vh;
+  }
+}
+
 @media (min-width: 414px) {
   .about-container {
     height: 100vh;
@@ -753,3 +759,4 @@ nav {
     justify-self: center;
   }
 }
+
