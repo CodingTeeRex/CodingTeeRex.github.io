@@ -64,3 +64,24 @@ const aboutObs = new IntersectionObserver(function(entries, observer) {
 
 aboutObs.observe(aboutMe);
 
+let isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+console.log(isMobile);
+
+if (isMobile) {
+    let element = document.querySelector(".about-body-item");
+    let attributes = [...element.attributes];
+    attributes.forEach(attr => {
+        if (attr.name !== "class") {
+            element.removeAttribute(attr.name);
+        }
+    });
+
+    element = document.querySelector(".skills");
+    attributes = [...element.attributes];
+    attributes.forEach(attr => {
+        if (attr.name !== "class") {
+            element.removeAttribute(attr.name);
+        }
+    });
+        
+}

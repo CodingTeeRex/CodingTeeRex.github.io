@@ -15,11 +15,7 @@ class TypeWriter {
         let typeSpeed = 50;
         if (!this.isMainTextComplete) {
             // Type main text
-
-            console.log("Typing Main Text");
             this.txt = this.mainText.substring(0, this.txt.length + 1);
-            console.log(this.txt.length);
-            console.log("this.txt: " + this.txt);
             
             // Insert word into HTML
             this.targetElement.innerHTML = `<span id="main-title">${this.txt}</span>`;
@@ -28,27 +24,25 @@ class TypeWriter {
                 typeSpeed = 800;
                 this.isMainTextComplete = true;
                 this.txt = ''
-                console.log(this.isMainTextComplete);
+                // console.log(this.isMainTextComplete);
             }
 
         } else {
             typeSpeed = 100;
-            console.log("Main Text Complete");
-            console.log(this.txt);
 
             // Type secondary text
             const index = this.currentWordIdx % this.wordBank.length; // get idx of current word in wordBank
             const currentWord = this.wordBank[index]; // get current word
-            console.log("Current Idx: " + index + "\n" + "Current Word: " + currentWord);
+            // console.log("Current Idx: " + index + "\n" + "Current Word: " + currentWord);
 
             if (this.isDeleting) {
                 typeSpeed /= 2;
 
                 this.txt = currentWord.substring(0, this.txt.length - 1);
-                console.log("this.txt: " + this.txt);
+                // console.log("this.txt: " + this.txt);
             } else {
                 this.txt = currentWord.substring(0, this.txt.length + 1);
-                console.log("this.txt: " + this.txt);
+                // console.log("this.txt: " + this.txt);
             }
             
             // Insert secondary text into HTML
@@ -104,9 +98,7 @@ class bounceEffect {
             }, 30)
         }
         applyBounce();
-        
-        console.log(this.targetElement.innerHTML);
-        console.log(document.querySelectorAll('anim-bounce'));
+    
     }
 }
 
