@@ -461,7 +461,6 @@ nav {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
     inset 0 0 2000px rgba(133, 95, 58, 0.5);
   grid-area: about;
-  display: none;
 }
 
 .sub-heading {
@@ -541,7 +540,7 @@ nav {
   position: relative;
 }
 
-.html-bar-inner {
+.bar-outline {
   content: "";
   height: 8px;
   width: 200px;
@@ -561,17 +560,6 @@ nav {
   position: relative;
 }
 
-.css-bar-inner {
-  content: "";
-  height: 8px;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .javascript-bar {
   margin: 5px 0;
   height: 8px;
@@ -579,17 +567,6 @@ nav {
   border-radius: 5px;
   background-color: yellow;
   position: relative;
-}
-
-.javascript-bar-inner {
-  content: "";
-  height: 8px;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .python-bar {
@@ -601,17 +578,6 @@ nav {
   position: relative;
 }
 
-.python-bar-inner {
-  content: "";
-  height: 8px;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .c-bar {
   margin: 5px 0;
   height: 8px;
@@ -621,17 +587,6 @@ nav {
   position: relative;
 }
 
-.c-bar-inner {
-  content: "";
-  height: 8px;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .java-bar {
   margin: 5px 0;
   height: 8px;
@@ -639,17 +594,6 @@ nav {
   border-radius: 5px;
   background-color: yellow;
   position: relative;
-}
-
-.java-bar-inner {
-  content: "";
-  height: 8px;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 @media (min-width: 414px) {
@@ -752,4 +696,14 @@ nav {
     min-width: 300px;
     justify-self: center;
   }
+}
+
+/* Projects Section */
+
+#projects {
+  height: 100vh;
+}
+
+.project-container {
+  height: 100vh;
 }
