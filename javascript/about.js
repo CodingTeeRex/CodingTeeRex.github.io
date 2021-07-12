@@ -55,7 +55,7 @@ const aboutObs = new IntersectionObserver(function(entries, observer) {
         if (entry.isIntersecting) {
             gsap.fromTo(".about-body-item", {opacity: 0, x: "-10%"}, {duration: 1.5, x: 0, opacity: 1, display: "block"});
             gsap.fromTo(".skills", {opacity: 0, x: "10%"}, {duration: 1.5, x: 0, opacity: 1, display: "block"});
-            gsap.fromTo(".skill-container", {opacity: 0, y: "-100%"}, {opacity: 1, y: 0, duration: 1, stagger: .15});
+            gsap.fromTo(".skill-container", {opacity: 0}, {opacity: 1, duration: 1, stagger: .15});
         } else {
             gsap.fromTo(".about-body-item", {x: 0, opacity: 1}, {duration: 0.1, x: "-10%", opacity: 0, display: "none"});
             gsap.fromTo(".skills", {opacity: 1, x: 0}, {duration: 0.1, x: "-10%", opacity: 0, display: "none"});
