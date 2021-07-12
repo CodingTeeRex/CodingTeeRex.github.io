@@ -611,19 +611,19 @@ nav {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "about skills";
     height: 100vh;
-    gap: 10px;
+    gap: 150px;
   }
 
   .about-body-item {
     grid-area: about;
     margin: 0;
-    margin-left: 10px;
+    margin-left: auto;
   }
 
   .skills {
     grid-area: skills;
     margin: 0;
-    margin-right: 10px;
+    margin-right: auto;
   }
 }
 
