@@ -65,7 +65,7 @@ strong {
 
 .about-body-font > p {
   font-family: "Heebo", sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
@@ -434,12 +434,13 @@ nav {
   background: url(../images/welcome_bg2.jpg) no-repeat left top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "about skills";
+  grid-template-areas: "about" "skills";
   gap: 50px;
   /* justify-content: center; */
   z-index: 0;
@@ -449,8 +450,9 @@ nav {
 
 .about-body-item {
   height: fit-content;
-  width: fit-content;
+  /* width: fit-content; */
   max-width: 800px;
+  min-width: 300px;
   border-radius: 15px;
   justify-self: center;
   padding: 25px;
@@ -461,11 +463,14 @@ nav {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
     inset 0 0 2000px rgba(133, 95, 58, 0.5);
   grid-area: about;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .sub-heading {
   font-family: var(--font-aboutTitle);
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: black;
   letter-spacing: 3px;
   margin-bottom: 20px;
@@ -481,9 +486,9 @@ nav {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.4);
   top: -20px;
-  right: -70px;
-  height: 160px;
-  width: 160px;
+  right: 5px;
+  height: 90px;
+  width: 90px;
   border-radius: 20px;
   box-shadow: 2px 1px 1px black, 3px 2px 1px black, 4px 3px 1px black,
     5px 4px 1px black, 5px 5px 5px black, -10px 10px 20px rgba(0, 0, 0, 0.3);
@@ -491,8 +496,8 @@ nav {
 }
 
 .about-body-image {
-  height: 150px;
-  width: 150px;
+  height: 80px;
+  width: 80px;
   border-radius: 15px;
   box-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
     -5px 4px 1px black, -5px 5px 5px black;
@@ -508,16 +513,21 @@ nav {
   padding: 25px;
   max-height: 360px;
   max-width: 300px;
+  width: 260px;
   border-radius: 15px;
   border: 1px solid black;
   padding: 25px;
   border: 1px solid black;
   text-align: justify;
+  justify-self: center;
   position: relative;
   z-index: 1;
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
     inset 0 0 2000px rgba(133, 95, 58, 0.5);
   display: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
 }
 
 .skills-image {
@@ -531,15 +541,6 @@ nav {
   transform: rotate(-20deg);
 }
 
-.html-bar {
-  margin: 5px 0;
-  height: 8px;
-  width: 125px;
-  border-radius: 5px;
-  background-color: yellow;
-  position: relative;
-}
-
 .bar-outline {
   content: "";
   height: 8px;
@@ -551,12 +552,21 @@ nav {
   left: 0;
 }
 
+.html-bar {
+  margin: 5px 0;
+  height: 8px;
+  width: 125px;
+  border-radius: 5px;
+  background-color: rgb(0, 255, 75);
+  position: relative;
+}
+
 .css-bar {
   margin: 5px 0;
   height: 8px;
   width: 125px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: rgb(0, 255, 75);
   position: relative;
 }
 
@@ -565,7 +575,7 @@ nav {
   height: 8px;
   width: 100px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: rgb(0, 255, 75);
   position: relative;
 }
 
@@ -574,7 +584,7 @@ nav {
   height: 8px;
   width: 160px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: rgb(0, 255, 75);
   position: relative;
 }
 
@@ -583,7 +593,7 @@ nav {
   height: 8px;
   width: 160px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: rgb(0, 255, 75);
   position: relative;
 }
 
@@ -592,109 +602,28 @@ nav {
   height: 8px;
   width: 100px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: rgb(0, 255, 75);
   position: relative;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 768px) {
   .about-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "about skills";
     height: 100vh;
-  }
-
-  .shape {
-    height: 90px;
-    width: 90px;
-    right: -30px;
-  }
-
-  .about-body-image {
-    height: 80px;
-    width: 80px;
-  }
-
-  .sub-heading {
-    font-size: 1.5rem;
-  }
-
-  .about-body-font > p {
-    font-size: 0.85rem;
-  }
-
-  .about-body-item {
-    margin: auto 75px;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 415px) {
-  .about-container {
-    height: 200vh;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "about" "skills";
-  }
-
-  .shape {
-    height: 90px;
-    width: 90px;
-    right: 5px;
-  }
-
-  .about-body-image {
-    height: 80px;
-    width: 80px;
-  }
-
-  .sub-heading {
-    font-size: 1.5rem;
-  }
-
-  .about-body-font > p {
-    font-size: 0.85rem;
+    gap: 10px;
   }
 
   .about-body-item {
     grid-area: about;
-    margin: auto 10px;
-    min-width: 300px;
+    margin: 0;
+    margin-left: 10px;
   }
 
   .skills {
     grid-area: skills;
-    min-width: 300px;
-    justify-self: center;
-  }
-}
-
-@media (max-width: 1140px) {
-  .about-container {
-    background-image: url(../images/welcome_bg2_mobile.jpg);
-    background-repeat: none;
-    background-size: cover;
-    height: 200vh;
-    width: 100vw;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "about" "skills";
-  }
-
-  .about-body-item {
-    grid-area: about;
-    max-height: fit-content;
-    min-width: 300px;
-  }
-
-  .sub-heading {
-    font-size: 1.5rem;
-  }
-
-  .about-body-font > p {
-    font-size: 0.85rem;
-  }
-
-  .skills {
-    grid-area: skills;
-    min-width: 300px;
-    justify-self: center;
+    margin: 0;
+    margin-right: 10px;
   }
 }
 
