@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+hr {
+  border: 1px solid black;
+}
+
 /* Typography */
 
 strong {
@@ -49,11 +53,7 @@ strong {
   font-size: 1.25rem;
   color: #fff5db;
   text-shadow: 3px 3px 2px black, 4px 4px 2px black, 5px 5px 2px black,
-    6px 6px 2px black,
-    /* 7px 7px 2px black,
-  8px 8px 2px black,
-  9px 9px 2px white, */ 10px 10px
-      15px pink;
+    6px 6px 2px black, 10px 10px 15px pink;
 }
 
 .intro-text {
@@ -137,7 +137,6 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* border: 2px dashed orange; */
 }
 
 .nav-link:first-child {
