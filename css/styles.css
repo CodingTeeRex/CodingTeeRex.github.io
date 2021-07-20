@@ -262,7 +262,7 @@ nav {
 .title-container {
   display: flex;
   position: absolute;
-  top: 15%;
+  top: 16%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -334,6 +334,12 @@ nav {
   }
   to {
     border-right-color: transparent;
+  }
+}
+
+@media (orientation: landscape) {
+  .title-container {
+    top: 25%;
   }
 }
 
