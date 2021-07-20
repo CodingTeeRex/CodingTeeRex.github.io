@@ -337,12 +337,6 @@ nav {
   }
 }
 
-@media (orientation: landscape) {
-  .title-container {
-    top: 25%;
-  }
-}
-
 @media (min-width: 780px) {
   .title-font {
     font-size: 1.6rem;
@@ -504,6 +498,12 @@ nav {
     color: rgb(0, 255, 195);
     text-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
       -5px 4px 1px black, -5px 5px 5px black;
+  }
+}
+
+@media (orientation: landscape) {
+  .title-container {
+    top: 25%;
   }
 }
 
