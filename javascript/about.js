@@ -65,7 +65,6 @@ const aboutObs = new IntersectionObserver(function(entries, observer) {
 aboutObs.observe(aboutMe);
 
 let isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
-console.log(isMobile);
 
 if (isMobile) {
     let element = document.querySelector(".about-body-item");
