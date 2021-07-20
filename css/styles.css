@@ -337,6 +337,77 @@ nav {
   }
 }
 
+@media (orientation: landscape) and (min-width: 812px) {
+  .title-container {
+    top: 25%;
+  }
+
+  .right-skew {
+    display: none;
+  }
+
+  .cntr {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .welcome-bg {
+    background-image: url(../images/welcome_galaxy_bg.jpg);
+    background-size: cover;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 90%;
+    animation: breathe 40s steps(50) infinite normal;
+    z-index: 2;
+  }
+
+  .welcome-container {
+    position: relative;
+    overflow: hidden;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title-container {
+    display: flex;
+    position: absolute;
+    top: 16%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 320px;
+    padding: 1em;
+  }
+
+  .welcome-title {
+    min-width: 320px;
+    height: 2.7em;
+    margin-bottom: 0.15em;
+  }
+
+  .welcome-subtitle {
+    display: flex;
+    width: max-content;
+  }
+
+  #main-title {
+    border-right: 0.3rem solid rgba(255, 255, 255, 0.8);
+    animation: cursor-blink 500ms steps(20) infinite normal;
+  }
+
+  #names {
+    color: rgb(0, 255, 195);
+    text-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
+      -5px 4px 1px black, -5px 5px 5px black;
+  }
+}
+
 @media (min-width: 780px) {
   .title-font {
     font-size: 1.6rem;
@@ -498,12 +569,6 @@ nav {
     color: rgb(0, 255, 195);
     text-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
       -5px 4px 1px black, -5px 5px 5px black;
-  }
-}
-
-@media (orientation: landscape) {
-  .title-container {
-    top: 25%;
   }
 }
 
