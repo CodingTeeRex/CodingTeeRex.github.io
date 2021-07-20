@@ -255,7 +255,6 @@ nav {
   position: relative;
   overflow: hidden;
   max-height: 100vh;
-  border: 2px solid red;
   display: flex;
   justify-content: center;
 }
@@ -269,7 +268,6 @@ nav {
   align-items: flex-start;
   min-width: 320px;
   padding: 1em;
-  border: 2px solid red;
 }
 
 .welcome-title {
@@ -383,7 +381,6 @@ nav {
     position: relative;
     overflow: hidden;
     max-height: 100vh;
-    border: 2px solid red;
   }
 
   .title-container {
@@ -466,7 +463,6 @@ nav {
     position: relative;
     overflow: hidden;
     max-height: 100vh;
-    border: 2px solid red;
   }
 
   .title-container {
