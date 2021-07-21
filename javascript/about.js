@@ -40,7 +40,7 @@ class bouncingLetters {
 //     alert("Mouseover Test");
 // });
 
-const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches || (window.matchMedia("only screen and (max-width: 768px)").matches &&(userAgentString.indexOf("Chrome") > -1));
 
 console.log(isMobile);
 
