@@ -636,7 +636,7 @@ nav {
   background: url(../images/welcome_bg2.jpg) no-repeat left top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: fit-content;
+  height: 100vh;
   min-height: fit-content;
   overflow: hidden;
   display: grid;
