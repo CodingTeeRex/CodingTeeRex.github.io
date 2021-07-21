@@ -633,11 +633,10 @@ nav {
 .about-container {
   border-top: 2px solid black;
   background-color: white;
-  background: url(../images/welcome_bg2.jpg) no-repeat left top;
+  background: url(../images/projects_bg_blur.jpg) no-repeat left top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  min-height: fit-content;
+  height: max-content;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
@@ -663,7 +662,7 @@ nav {
   position: relative;
   z-index: 1;
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
-    inset 0 0 2000px rgba(133, 95, 58, 0.5);
+    inset 0 0 2000px rgba(143, 140, 140, 0.514);
   grid-area: about;
   margin-top: 40px;
   margin-left: 10px;
@@ -725,7 +724,7 @@ nav {
   position: relative;
   z-index: 1;
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
-    inset 0 0 2000px rgba(133, 95, 58, 0.5);
+    inset 0 0 2000px rgba(143, 140, 140, 0.514);;
   display: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -812,7 +811,7 @@ nav {
   .about-container {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "about skills";
-    min-height: max-content;
+    min-height: 100vh;
     align-items: center;
     justify-content: space-around;
     gap: 75px;
@@ -834,9 +833,13 @@ nav {
 /* Projects Section */
 
 #projects {
-  height: 100vh;
+  border-top: 2px solid black;
 }
 
 .project-container {
   height: 100vh;
+  background-image: url(../images/welcome_bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
