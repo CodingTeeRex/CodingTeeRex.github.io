@@ -812,7 +812,6 @@ nav {
   .about-container {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "about skills";
-    height: 100vh;
     min-height: fit-content;
     gap: 150px;
   }
