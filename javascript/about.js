@@ -40,9 +40,30 @@ class bouncingLetters {
 //     alert("Mouseover Test");
 // });
 
+const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
+console.log(isMobile);
+
+if (isMobile) {
+    let element = document.querySelector(".about-body-item");
+    let attributes = [...element.attributes];
+    attributes.forEach(attr => {
+        if (attr.name !== "class") {
+            element.removeAttribute(attr.name);
+        }
+    });
+
+    element = document.querySelector(".skills");
+    attributes = [...element.attributes];
+    attributes.forEach(attr => {
+        if (attr.name !== "class") {
+            element.removeAttribute(attr.name);
+        }
+    });
+}
+
 // Intersection Observer
 
-const sections = document.querySelectorAll("section");
 const options = {
     root: null,
     rootMargin: "25px",
@@ -63,24 +84,3 @@ const aboutObs = new IntersectionObserver(function(entries, observer) {
 }, options);
 
 aboutObs.observe(aboutMe);
-
-let isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
-
-if (isMobile) {
-    let element = document.querySelector(".about-body-item");
-    let attributes = [...element.attributes];
-    attributes.forEach(attr => {
-        if (attr.name !== "class") {
-            element.removeAttribute(attr.name);
-        }
-    });
-
-    element = document.querySelector(".skills");
-    attributes = [...element.attributes];
-    attributes.forEach(attr => {
-        if (attr.name !== "class") {
-            element.removeAttribute(attr.name);
-        }
-    });
-        
-}
