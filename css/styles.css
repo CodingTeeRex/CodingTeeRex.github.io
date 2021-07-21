@@ -819,12 +819,13 @@ nav {
   .about-body-item {
     grid-area: about;
     margin: 0;
-    margin: 100px 50px;
+    margin: auto;
   }
 
   .skills {
     grid-area: skills;
-    margin: 100px 50px;
+    margin: 0;
+    margin-right: auto;
   }
 }
 
