@@ -21,6 +21,7 @@ html {
 
 hr {
   border: 1px solid black;
+  background-color: black;
 }
 
 /* Typography */
@@ -228,19 +229,26 @@ nav {
 /* Welcome area styles */
 
 .right-skew {
-  display: none;
+  background-image: url(../images/altumcode-zE007SNgcdE-unsplash_blur.jpg);
+  background-size: cover;
+  background-position: right;
+  width: 100vw;
+  height: 50vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  order: 2;
 }
 
 .cntr {
   overflow: hidden;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
+  order: 1;
+  z-index: -1;
 }
 
 .welcome-bg {
   background-image: url(../images/welcome_galaxy_bg.jpg);
   background-size: cover;
-  display: block;
   overflow: hidden;
   padding: 0;
   min-height: 100vh;
@@ -255,7 +263,9 @@ nav {
   position: relative;
   overflow: hidden;
   max-height: 100vh;
+  max-width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -337,73 +347,6 @@ nav {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  .right-skew {
-    display: none;
-  }
-
-  .cntr {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .welcome-bg {
-    background-image: url(../images/welcome_galaxy_bg.jpg);
-    background-size: cover;
-    display: block;
-    overflow: hidden;
-    padding: 0;
-    min-height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    opacity: 90%;
-    animation: breathe 40s steps(50) infinite normal;
-    z-index: 2;
-  }
-
-  .welcome-container {
-    position: relative;
-    overflow: hidden;
-    max-height: 100vh;
-    display: flex;
-    justify-content: center;
-  }
-
-  .title-container {
-    display: flex;
-    position: absolute;
-    top: 16%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-width: 320px;
-    padding: 1em;
-  }
-
-  .welcome-title {
-    min-width: 320px;
-    height: 2.7em;
-    margin-bottom: 0.15em;
-  }
-
-  .welcome-subtitle {
-    display: flex;
-    width: max-content;
-  }
-
-  #main-title {
-    border-right: 0.3rem solid rgba(255, 255, 255, 0.8);
-    animation: cursor-blink 500ms steps(20) infinite normal;
-  }
-
-  #names {
-    color: rgb(0, 255, 195);
-    text-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
-      -5px 4px 1px black, -5px 5px 5px black;
-  }
-}
-
 @media (min-width: 780px) {
   .title-font {
     font-size: 1.6rem;
@@ -413,20 +356,23 @@ nav {
     background-image: url(../images/altumcode-zE007SNgcdE-unsplash_blur.jpg);
     background-size: cover;
     background-position: right;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     position: absolute;
     background-color: #24445b;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     display: inline-block;
+    z-index: 0;
   }
 
   .cntr {
     overflow: hidden;
     transform: skewX(20deg);
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     margin-left: -120vw;
     border-right: 3px solid black;
+    z-index: 1;
   }
 
   .welcome-bg {
@@ -441,13 +387,13 @@ nav {
     object-fit: cover;
     opacity: 90%;
     animation: breathe 40s steps(50) infinite normal;
-    z-index: 2;
   }
 
   .welcome-container {
     position: relative;
     overflow: hidden;
     max-height: 100vh;
+    flex-direction: row;
   }
 
   .title-container {
@@ -461,6 +407,7 @@ nav {
     align-items: flex-start;
     min-width: 320px;
     padding: 1em;
+    z-index: 3;
   }
 
   .welcome-title {
@@ -633,7 +580,7 @@ nav {
 .about-container {
   border-top: 2px solid black;
   background-color: white;
-  background: url(../images/projects_bg_blur.jpg) no-repeat left top;
+  background: url(../images/projects_bg_blur.jpg) no-repeat center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: max-content;
@@ -669,10 +616,14 @@ nav {
   margin-right: 10px;
 }
 
+p > a {
+  color: rgb(0, 255, 195);
+}
+
 .sub-heading {
   font-family: var(--font-aboutTitle);
-  font-size: 1.3rem;
-  color: black;
+  font-size: 1.5rem;
+  color: white;
   letter-spacing: 3px;
   margin-bottom: 20px;
   position: relative;
@@ -834,6 +785,7 @@ nav {
 
 #projects {
   border-top: 2px solid black;
+  height: 100vh;
 }
 
 .project-container {
