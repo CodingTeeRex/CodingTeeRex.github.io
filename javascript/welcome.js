@@ -119,4 +119,7 @@ setTimeout(() => {
     const welcome = document.querySelector('.welcome-title');
     const displayTextMain = "Hello, My name is ";
     new TypeWriter(welcome, displayTextMain);
+
+    const e = document.querySelector('.intro');
+    e.remove();
 }, 6000);
