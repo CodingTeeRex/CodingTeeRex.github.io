@@ -80,6 +80,7 @@ strong {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 24px;
   color: white;
   text-shadow: -1px 1px 10px rgb(0, 0, 0);
 }
@@ -89,6 +90,7 @@ strong {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 24px;
   color: white;
   text-shadow: -1px 1px 10px rgb(0, 0, 0);
   text-align: justify;
@@ -818,12 +820,6 @@ p > a:hover {
   position: relative;
 }
 
-.hr-white {
-  border: 1px solid var(--clr-text);
-  margin-top: 1em;
-  width: 100%;
-}
-
 .indent-2 {
   display: flex;
   align-items: center;
@@ -840,10 +836,19 @@ p > a:hover {
 }
 
 .proj {
-  max-width: 500px;
+  max-width: 450px;
+  min-height: 500px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+}
+
+.proj::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin-top: 1rem;
+  background-color: var(--clr-text);
 }
 
 .proj-name {
@@ -870,15 +875,40 @@ p > a:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   align-self: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 500px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in;
+}
+
+.btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .btn > a {
   text-decoration: none;
+  color: black;
 }
 
 @media (min-width: 500px) {
   .proj {
-    align-self: center;
+    /* border: 1px solid var(--clr-text);
+    border-radius: 10px; */
   }
 }
 
