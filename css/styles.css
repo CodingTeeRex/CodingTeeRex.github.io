@@ -858,7 +858,7 @@ p > a:hover {
 }
 
 .proj {
-  max-width: 450px;
+  max-width: 325px;
   height: fit-content;
   min-height: 500px;
   padding: 1rem;
@@ -868,8 +868,8 @@ p > a:hover {
   border: 1px solid black;
   padding: 25px;
   border: 1px solid black;
-  text-align: justify;
-  justify-self: center;
+  /* text-align: justify; */
+  align-self: center;
   position: relative;
   z-index: 1;
   background-color: rgba(49, 49, 46, 0.6);
@@ -935,10 +935,10 @@ p > a:hover {
   transform-origin: left;
 }
 
-.btn > a {
-  text-decoration: none;
-  color: black;
-}
+
+/* .text-justify {
+  justify-self: center;
+} */
 
 @media (min-width: 465px) {
   .project-container {
@@ -952,10 +952,13 @@ p > a:hover {
   }
 
   .project-container {
-    flex-direction: row;
+    /* flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 5%;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left mid right";
   }
 }
