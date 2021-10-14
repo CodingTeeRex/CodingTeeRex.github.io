@@ -951,14 +951,16 @@ p > a:hover {
     min-height: 100vh;
   }
 
+  .proj {
+    max-width: 450px;
+    align-self: flex-start;
+  }
+
   .project-container {
-    /* flex-direction: row;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
     margin-top: 5%;
-    flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "left mid right";
+    flex-wrap: wrap;
   }
 }
