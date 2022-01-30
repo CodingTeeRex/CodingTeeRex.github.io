@@ -711,7 +711,7 @@ p > a:hover {
 .skills {
   grid-area: skills;
   padding: 25px;
-  max-height: 360px;
+  max-height: 560px;
   max-width: 300px;
   width: 260px;
   border-radius: 15px;
@@ -728,6 +728,10 @@ p > a:hover {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 40px;
+}
+
+.skill-container {
+  margin-top: 10px;
 }
 
 .skills-image {
@@ -753,7 +757,7 @@ p > a:hover {
 }
 
 .html-bar {
-  margin: 5px 0;
+  margin: 1px 0;
   height: 8px;
   width: 125px;
   border-radius: 5px;
@@ -806,6 +810,15 @@ p > a:hover {
   position: relative;
 }
 
+.mysql-bar {
+  margin: 5px 0;
+  height: 8px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: var(--clr-accent);
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .about-container {
     grid-template-columns: 2fr 1fr;
@@ -838,6 +851,9 @@ p > a:hover {
   max-width: 100vw;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .indent-2 {
@@ -850,11 +866,17 @@ p > a:hover {
 
 .project-container {
   display: flex;
-  flex-direction: column;
-  height: max-content;
-  min-width: fit-content;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100%;
   margin-top: 1.25rem;
   margin-bottom: 5rem;
+  border: 2px solid pink;
+}
+
+.row {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .proj {
@@ -873,9 +895,7 @@ p > a:hover {
   position: relative;
   z-index: 1;
   background-color: rgba(49, 49, 46, 0.6);
-  margin-bottom: 25px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: auto;
 }
 
 .proj::after {
@@ -904,9 +924,10 @@ p > a:hover {
   border: 0;
   border-radius: 500px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 0.35rem 0.5rem;
   background-color: var(--clr-text);
-  width: 100px;
+  width: 115px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   align-self: center;
@@ -933,6 +954,11 @@ p > a:hover {
 .btn:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+button > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 
