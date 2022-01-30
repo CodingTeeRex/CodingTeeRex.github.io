@@ -28,6 +28,7 @@ html {
   background-color: black;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 hr {
@@ -252,71 +253,16 @@ nav {
 
 /* Welcome area styles */
 
-.right-skew {
-  background-image: url(../images/altumcode-zE007SNgcdE-unsplash_blur.jpg);
-  background-size: cover;
-  background-position: right;
-  width: 100vw;
-  height: 50vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  order: 2;
-}
-
-
-.right-skew-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.quote-img {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  margin-top: 1.25rem;
-  margin-bottom: 2rem;
-  border: 1px solid black;
-  box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
-    inset 0 0 2000px rgba(143, 140, 140, 0.514);;
-  position: relative;
-}
-
-.cntr {
-  overflow: hidden;
-  height: 50vh;
-  width: 100vw;
-  order: 1;
-  z-index: -1;
-}
-
-.welcome-bg {
-  background-image: url(../images/welcome_galaxy_bg.jpg);
-  background-size: cover;
-  overflow: hidden;
-  padding: 0;
-  min-height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  opacity: 90%;
-  animation: breathe 40s steps(50) infinite normal;
-  z-index: 2;
-}
-
 .welcome-container {
-  position: relative;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  max-height: 100vh;
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-image: url(../images/wp2231064-3440x1440-wallpapers.jpg);
+  background-size: cover;
 }
 
 .title-container {
   display: flex;
-  position: absolute;
-  top: 16%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -333,6 +279,19 @@ nav {
 .welcome-subtitle {
   display: flex;
   width: max-content;
+}
+
+.frosted {
+  background-color: rgba(172, 154, 171, 0.4);  
+  backdrop-filter: blur(50px);
+  height: 100%;
+  border-radius: 20px;
+  padding: .8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #main-title {
@@ -391,115 +350,10 @@ nav {
   }
 }
 
-@media (min-width: 770px) {
-  .title-font {
-    font-size: 1.6rem;
-  }
 
-  .right-skew {
-    background-image: url(../images/altumcode-zE007SNgcdE-unsplash_blur.jpg);
-    background-size: cover;
-    background-position: right;
-    min-width: 100vw;
-    min-height: 100vh;
-    position: absolute;
-    background-color: #24445b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    display: inline-block;
-    z-index: 0;
-  }
-
-  .cntr {
-    overflow: hidden;
-    transform: skewX(20deg);
-    min-height: 100vh;
-    min-width: 100vw;
-    margin-left: -120vw;
-    border-right: 3px solid black;
-    z-index: 1;
-  }
-
-  .welcome-bg {
-    background-image: url(../images/welcome_galaxy_bg.jpg);
-    background-size: cover;
-    background-position: 500px;
-    display: block;
-    overflow: hidden;
-    padding: 0;
-    min-height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    opacity: 90%;
-    animation: breathe 40s steps(50) infinite normal;
-  }
-
-  .welcome-container {
-    position: relative;
-    overflow: hidden;
-    max-height: 100vh;
-    flex-direction: row;
-  }
-
-  .title-container {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-left: 1em;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-width: 320px;
-    padding: 1em;
-    z-index: 3;
-  }
-
-  .welcome-title {
-    width: 320px;
-    height: 2.7em;
-    margin-bottom: 0.15em;
-  }
-
-  .welcome-subtitle {
-    display: flex;
-    width: max-content;
-  }
-
-  #main-title {
-    border-right: 0.3rem solid rgba(255, 255, 255, 0.8);
-    animation: cursor-blink 500ms steps(20) infinite normal;
-  }
-
-  #names {
-    color: rgb(0, 255, 195);
-    text-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
-      -5px 4px 1px black, -5px 5px 5px black;
-  }
-}
-
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
   .title-font {
     font-size: 2.25rem;
-  }
-
-  .right-skew {
-    background-image: url(../images/altumcode-zE007SNgcdE-unsplash_blur.jpg);
-    background-size: cover;
-    background-position: right;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-color: #24445b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    display: inline-block;
-  }
-
-  .cntr {
-    overflow: hidden;
-    transform: skewX(20deg);
-    width: 100vw;
-    margin-left: -140vw;
-    border-right: 3px solid black;
   }
 
   .welcome-bg {
@@ -557,7 +411,7 @@ nav {
     text-shadow: -2px 1px 1px black, -3px 2px 1px black, -4px 3px 1px black,
       -5px 4px 1px black, -5px 5px 5px black;
   }
-}
+} */
 
 /* .anim-bounce {
   animation: letter-bounce 500ms linear 1 normal;
@@ -630,6 +484,7 @@ nav {
   height: max-content;
   overflow: hidden;
   min-height: 100vh;
+  width: 100vw;
   /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -840,7 +695,7 @@ p > a:hover {
   border-top: 2px solid black;
   background-color: black;
   height: fit-content;
-  max-width: 100vw;
+  width: 100vw;
   overflow: hidden;
   position: relative;
   display: flex;

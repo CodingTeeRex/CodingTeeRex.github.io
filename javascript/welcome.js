@@ -111,8 +111,8 @@ timeline.to('.intro', {opacity: '0', duration: 1, display: "none"});
 timeline.fromTo('body', {overflow: 'hidden'}, {overflow: 'visible'})
 timeline.fromTo('header', {opacity: '0'}, {opacity: 1, duration: 1});
 timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 0.1});
-// timeline.fromTo('.welcome-title', {opacity: '0'}, {opacity: 1, duration: 1});
-timeline.fromTo('.welcome-subtitle', {opacity: '0'}, {opacity: 1, duration: 1, delay: 4});
+timeline.fromTo('.frosted', {opacity: '0'}, {opacity: 1, duration: 0.8, delay: 0.8});
+timeline.fromTo('.welcome-subtitle', {opacity: '0'}, {opacity: 1, duration: 1, delay: 2.2});
 
 // Start TypeWriter
 setTimeout(() => {
