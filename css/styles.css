@@ -629,15 +629,16 @@ nav {
   background-size: cover;
   height: max-content;
   overflow: hidden;
-  display: grid;
+  min-height: 100vh;
+  /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: "about" "skills";
-  gap: 50px;
+  gap: 50px; */
   /* justify-content: center; */
-  z-index: 0;
+  /* z-index: 0;
   margin: 0;
-  align-content: center;
+  align-content: center; */
 }
 
 .about-body-item {
@@ -646,18 +647,13 @@ nav {
   max-width: 800px;
   min-width: 300px;
   border-radius: 15px;
-  justify-self: center;
   padding: 25px;
   border: 1px solid black;
   text-align: justify;
-  position: relative;
   z-index: 1;
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
     inset 0 0 2000px rgba(143, 140, 140, 0.514);
-  grid-area: about;
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: auto;
 }
 
 p > a {
@@ -709,7 +705,6 @@ p > a:hover {
 }
 
 .skills {
-  grid-area: skills;
   padding: 25px;
   max-height: 560px;
   max-width: 300px;
@@ -717,7 +712,6 @@ p > a:hover {
   border-radius: 15px;
   border: 1px solid black;
   padding: 25px;
-  border: 1px solid black;
   text-align: justify;
   justify-self: center;
   position: relative;
@@ -725,9 +719,7 @@ p > a:hover {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1),
     inset 0 0 2000px rgba(143, 140, 140, 0.514);
   display: none;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 40px;
+  margin: auto;
 }
 
 .skill-container {
@@ -819,7 +811,7 @@ p > a:hover {
   position: relative;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .about-container {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "about skills";
@@ -840,7 +832,7 @@ p > a:hover {
     margin: 50px 0;
     margin-right: 50px;
   }
-}
+} */
 
 /* Projects Section */
 
