@@ -530,6 +530,10 @@ p > a:hover {
   margin-bottom: 20px;
 }
 
+.txt-shadow {
+  text-shadow: black 1px 2px, black 2px 4px;
+}
+
 .about-body-descr {
   margin-top: 20px;
   position: relative;
