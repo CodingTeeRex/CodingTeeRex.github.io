@@ -778,7 +778,7 @@ p > a:hover {
   margin-bottom: 1rem;
   padding: 0.35rem 0.5rem;
   background-color: var(--clr-text);
-  width: 115px;
+  min-width: 120px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   align-self: center;
