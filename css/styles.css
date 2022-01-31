@@ -82,8 +82,8 @@ strong {
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 24px;
-  color: rgb(26, 26, 26);
-  /* text-shadow: -1px 1px 10px rgb(0, 0, 0); */
+  color: rgb(255, 255, 255);
+  text-shadow: -1px 1px 10px rgb(0, 0, 0);
 }
 
 .normal-font {
@@ -229,7 +229,7 @@ nav {
   }
 
   .nav-link:first-child {
-    margin-left: 2em;
+    margin-left: 0em;
   }
 
   .nav-items {
@@ -282,9 +282,11 @@ nav {
 }
 
 .frosted {
-  background-color: rgba(172, 154, 171, 0.4);  
+  background-color: rgba(172, 154, 171, 0.2);
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.7), -2px 2px 1px rgba(0, 0, 0, 1);
   backdrop-filter: blur(50px);
   height: 100%;
+  max-width: 500px;
   border-radius: 20px;
   padding: .8rem;
   text-align: center;
