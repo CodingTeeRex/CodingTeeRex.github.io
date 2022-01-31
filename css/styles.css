@@ -480,7 +480,7 @@ nav {
 .about-container {
   border-top: 2px solid black;
   background-color: white;
-  background: url(../images/projects_bg_blur.jpg) no-repeat center top;
+  background: url(../images/aboutbg.jpg) no-repeat center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: max-content;
@@ -696,7 +696,7 @@ p > a:hover {
 #projects {
   border-top: 2px solid black;
   background-color: black;
-  background-image: url(../images/wp2231111-3440x1440-wallpapers.png);
+  background-image: url(../images/projectsbg.jpg);
   background-size: cover;
   height: fit-content;
   width: 100vw;
